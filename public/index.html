@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheriff de Lucaspol</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Sheriff de Lucaspol</h1>
+    <p>Pasión de barrio, fútbol de verdad.</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Plantilla</h2>
+      <div id="players-grid" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Próximos partidos</h2>
+      <div id="upcoming-list" class="list"></div>
+    </section>
+
+    <section>
+      <h2>Últimos resultados</h2>
+      <div id="results-list" class="list"></div>
+    </section>
+
+    <section>
+      <h2>Noticias</h2>
+      <div id="news-list" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Zona Socios</h2>
+      <form id="socios-form" class="socios-form">
+        <input name="name" placeholder="Nombre" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="phone" placeholder="Teléfono" required />
+        <button type="submit">Quiero ser socio</button>
+      </form>
+      <p id="socios-message"></p>
+    </section>
+  </main>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
