@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Sheriff de Lucaspol</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen">
+  <div class="max-w-6xl mx-auto p-4 md:p-8">
+    <h1 class="text-3xl font-bold mb-6">Panel Admin - Sheriff de Lucaspol</h1>
+
+    <section id="login-box" class="bg-white rounded-xl shadow p-5 mb-8 max-w-md">
+      <h2 class="text-xl font-semibold mb-4">Iniciar sesión</h2>
+      <form id="login-form" class="space-y-3">
+        <input name="username" placeholder="Usuario" class="w-full border rounded-lg px-3 py-2" required />
+        <input name="password" type="password" placeholder="Contraseña" class="w-full border rounded-lg px-3 py-2" required />
+        <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Entrar</button>
+      </form>
+      <p id="login-message" class="mt-2 text-sm"></p>
+    </section>
+
+    <section id="dashboard" class="hidden space-y-6">
+      <button id="logout" class="bg-slate-700 text-white px-3 py-2 rounded-lg">Cerrar sesión</button>
+      <div id="sections" class="grid md:grid-cols-2 gap-5"></div>
+      <section class="bg-white rounded-xl shadow p-4">
+        <h3 class="font-semibold mb-2">Socios registrados</h3>
+        <div id="socios-list" class="text-sm space-y-2"></div>
+      </section>
+    </section>
+  </div>
+
+  <script src="/admin/panel.js" defer></script>
+</body>
+</html>

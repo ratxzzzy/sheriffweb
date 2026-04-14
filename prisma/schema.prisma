@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum MatchResult {
+  VICTORIA
+  DERROTA
+  EMPATE
+}
+
+model Player {
+  id        Int      @id @default(autoincrement())
+  dorsal    Int
+  name      String
+  nick      String?
+  badges    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UpcomingMatch {
+  id        Int      @id @default(autoincrement())
+  rival     String
+  date      DateTime
+  location  String
+  tournament String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Result {
+  id         Int         @id @default(autoincrement())
+  rival      String
+  date       DateTime
+  score      String
+  resultType MatchResult
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+}
+
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  date      DateTime
+  excerpt   String
+  imageUrl  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Socio {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  createdAt DateTime @default(now())
+}
